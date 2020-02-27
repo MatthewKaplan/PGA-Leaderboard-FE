@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .App-logo {
@@ -35,4 +36,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-bg-image {
+  position: fixed;
+  z-index: -8;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.leaderboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,87 @@
+.leaderboard-table-component {
+    width: 98%;
+    margin: 10px 0 0 10px;
+    overflow: scroll;
+    .table td,
+    .table th {
+        border: none;
+        padding: 0;
+    }
+    .table {
+        border-spacing: 5px;
+    }
+    .table-head {
+        height: 115px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 10px;
+        .pga-logo-container {
+            img {
+                height: 115px;
+                margin: 0 auto;
+                display: block;
+            }
+            margin: 0 auto;
+        }
+        div {
+            background: linear-gradient(0deg, rgba(1,15,24,0.96) 20%, rgba(1,15,24,0.76) 47%, rgba(1,14,24,0.66) 100%);
+            border: 3px ridge #010F18;
+            h3 {
+                margin: 30px 0 0 30px;
+            }
+            p {
+                margin-left: 30px;
+            }
+            height: 115px;
+            width: 100%;
+            color: white;
+        }
+    }
+    table {
+        border-collapse: separate;
+    }
+
+    .leaderboard-table {
+        border-spacing: 5px;
+        color: black;
+        th {
+            color: white;
+        }
+
+        .player-name {
+            background: #010F18;
+            border: 3px ridge #010F18;
+            color: white;
+            text-align: center;
+            width: 60%;
+        }
+
+        .player-score {
+            background: #136F9A;
+            color: white;
+            text-align: center;
+            width: 20%;
+        }
+
+        .edit-player {
+            background: #006400;
+            width: 8%;
+            padding-top: 3px;
+        }
+
+        .delete-player {
+            background:#8B0000;
+            width: 8%;
+            padding-top: 3px;
+        }
+
+        .delete-btn,
+        .edit-player-btn {
+            height: 22px;
+            width: 25px;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
