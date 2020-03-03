@@ -40,3 +40,30 @@
         margin-top: 18px;
     }
 }
+
+@media (max-width: 375px) {
+    .footer-component {
+        .cbs-logo {
+            margin: 0 10px;
+            width: 85px;
+            height: 95px;
+        }
+        
+        .news-scroll {
+            h3 {
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .ticker {
+                text-align: center;
+                margin: 5px 0px 30px 0px;
+            }
+
+            .dot {
+                margin: 20px 15px 8px 40px;
+            }
+            
+        }
+    }
+}

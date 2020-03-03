@@ -1,6 +1,5 @@
 .header-component {
     display: grid;
-    grid-template-columns: 1fr 12fr;
     .pga-main-logo {
         height: 60px;
         width: 60px;
@@ -23,5 +22,15 @@
         letter-spacing: 2px;
         color: #fff;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-component {
+        justify-content: right;
+
+        .pga-main-logo {
+            margin: 15px 25px 0 0;
+        }
     }
 }

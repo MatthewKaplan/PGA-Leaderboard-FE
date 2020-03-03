@@ -160,3 +160,9 @@
         transition: 0.7s;
       }
     }   
+
+    @media (max-width: 375px) {
+      .leaderboard-view-component {
+        width: 90%;
+      }
+    }

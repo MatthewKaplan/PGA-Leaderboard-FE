@@ -85,3 +85,35 @@
         }
     }
 }
+
+@media (max-width: 375px) {
+    .leaderboard-table-component {
+        margin: 10px 5px 0 5px;
+        padding: 5px;
+        .table-head .table-header {
+            .table-title {
+                font-size: 13px;
+                margin: 30px 0 0 15px;
+            }
+            p {
+                margin-left: 15px;
+                font-size: 12px;
+            }
+        }
+
+        .leaderboard-table {
+            .edit-remove {
+                display: none;
+            }
+            .player-name {
+                font-size: 12px;
+            }
+            .delete-player {
+                width: 8%;
+            }
+            img {
+                padding: 3px;
+            }
+        }
+    }
+}

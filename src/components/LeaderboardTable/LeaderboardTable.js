@@ -23,8 +23,8 @@ class LeaderboardTable extends Component {
               alt="PGA logo"
             />
           </div>
-          <div>
-            <h3>1ST ANNUAL FRISCO CHAMPIONSHIP</h3>
+          <div className="table-header">
+            <h3 className="table-title">1ST ANNUAL FRISCO CHAMPIONSHIP</h3>
             <p>FRISCO, TX</p>
           </div>
         </container>
@@ -33,8 +33,8 @@ class LeaderboardTable extends Component {
             <tr>
               <th>Name</th>
               <th>Score</th>
-              <th>Edit</th>
-              <th>Remove</th>
+              <th className="edit-remove">Edit</th>
+              <th className="edit-remove">Remove</th>
             </tr>
           </thead>
           <tbody>
