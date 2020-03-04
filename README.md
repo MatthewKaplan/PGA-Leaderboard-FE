@@ -16,3 +16,22 @@ The purpose of this assignment was to create a generic score leaderboard that al
 ## Preview:
 
 <img src="https://i.imgur.com/6rpavSY.jpg" width="900" />
+
+## Testing Project:
+
+After following the <b>Getting Started</b> instructions you may test the project by doing the following.
+
+test all files:
+
+```
+$ npm test
+```
+
+test the total coverage of the project:
+
+```
+$ npm t -- --coverage --watchAll=false
+```
+<p align="center">
+  <img src="https://i.imgur.com/rh4qydW.png" alt="project test coverage">
+</p>

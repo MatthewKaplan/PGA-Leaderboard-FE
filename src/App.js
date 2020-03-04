@@ -3,11 +3,13 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import LeaderboardView from "./components/LeaderboardView/LeaderboardView";
 import Footer from "./components/Footer/Footer";
+import { sortPlayerArr } from './assets/cleaners';
 
 class App extends Component {
   state = {
     playerArr: [],
-    link: "https://pga-leaderboard-be.herokuapp.com"
+    link: "https://pga-leaderboard-be.herokuapp.com",
+    error: ""
   };
 
   componentDidMount() {
@@ -18,31 +20,11 @@ class App extends Component {
     try {
       const players = await fetch(`${this.state.link}/api/v1/players`);
       const response = await players.json();
-      await this.sortPlayerArr(response);
+      await sortPlayerArr(response);
       this.setState({ playerArr: response });
     } catch (error) {
       this.setState({ error: error.message });
     }
-  };
-
-  sortPlayerArr = arr => {
-    arr.sort((a, b) => {
-      let scoreA = parseInt(a.score);
-      let scoreB = parseInt(b.score);
-      if (scoreA !== scoreB) {
-        return scoreB - scoreA;
-      } else if (a.last_name.toLowerCase() < b.last_name.toLowerCase()) {
-        return -1;
-      } else if (a.last_name.toLowerCase() > b.last_name.toLowerCase()) {
-        return 1;
-      } else if (a.first_name.toLowerCase() < b.first_name.toLowerCase()) {
-        return -1;
-      } else if (a.first_name.toLowerCase() > b.first_name.toLowerCase()) {
-        return 1;
-      } else {
-        return 0;
-      }
-    });
   };
 
   addPlayer = async (first_name, last_name, score) => {

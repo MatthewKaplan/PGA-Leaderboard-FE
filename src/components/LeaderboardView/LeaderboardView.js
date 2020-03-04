@@ -65,6 +65,7 @@ class LeaderboardView extends Component {
           <div
             className="table-btn"
             id="nav1"
+            data-test="new-player-btn"
             onClick={() => this.setState({ newPlayer: true })}
           >
             <h3>ADD PLAYER</h3>
@@ -76,6 +77,7 @@ class LeaderboardView extends Component {
               <div className="modal-content">
                 <div
                   className="close"
+                  data-test="exit-modal-btn"
                   onClick={() =>
                     this.setState({ newPlayer: false, editPlayer: false })
                   }
@@ -84,6 +86,7 @@ class LeaderboardView extends Component {
                 </div>
                 <form
                   className="player-maker-form"
+                  data-test="player-form"
                   onSubmit={e => this.handleSubmit(e)}
                 >
                   <div className="player-name-container">
@@ -100,6 +103,7 @@ class LeaderboardView extends Component {
                       id="new-player-name"
                       name="name"
                       placeholder="First Name"
+                      data-test="first-name-input"
                       value={this.state.firstName}
                       onChange={e =>
                         this.setState({ firstName: e.target.value })
@@ -112,6 +116,7 @@ class LeaderboardView extends Component {
                       id="new-player-name"
                       name="name"
                       placeholder="Last Name"
+                      data-test="last-name-input"
                       value={this.state.lastName}
                       onChange={e =>
                         this.setState({ lastName: e.target.value })
@@ -135,6 +140,7 @@ class LeaderboardView extends Component {
                       className="player-name-input"
                       id="new-player-name"
                       name="name"
+                      data-test="player-score-input"
                       placeholder="0-100"
                       value={this.state.playerScore}
                       onChange={e =>

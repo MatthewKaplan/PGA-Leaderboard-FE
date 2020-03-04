@@ -46,6 +46,7 @@ class LeaderboardTable extends Component {
                 <td className="player-score">{player.score}</td>
                 <td
                   className="edit-player"
+                  data-test="edit-btn"
                   onClick={() => {
                     this.editPlayerHandler(player);
                   }}
@@ -58,6 +59,7 @@ class LeaderboardTable extends Component {
                 </td>
                 <td
                   className="delete-player"
+                  data-test="delete-btn"
                   onClick={() => {
                     this.deletePlayerHandler(player);
                   }}

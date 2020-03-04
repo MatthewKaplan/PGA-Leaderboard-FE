@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "./Footer.scss";
 import Ticker from "react-ticker";
+import { cleanNewsData } from '../../assets/cleaners';
 
 class Footer extends Component {
   state = {
     newsArr: [],
     link:
       "https://api.sportsdata.io/golf/v2/json/News?key=2c8dc552e7334a8eaf607b64dcbe5306",
-    loading: false
+    loading: false,
+    error: ""
   };
 
   componentDidMount() {
@@ -19,20 +21,11 @@ class Footer extends Component {
     try {
       const news = await fetch(`${this.state.link}`);
       const response = await news.json();
-      const cleanedNewsArr = await this.cleanNewsData(response);
+      const cleanedNewsArr = await cleanNewsData(response);
       this.setState({ newsArr: cleanedNewsArr, loading: false });
     } catch (error) {
       this.setState({ error: error.message });
     }
-  };
-
-  cleanNewsData = data => {
-    const cleanedNewsArr = data.map(news => {
-      return {
-        Title: news.Title
-      };
-    });
-    return cleanedNewsArr;
   };
 
   render() {

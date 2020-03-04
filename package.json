@@ -38,5 +38,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/utils/mockData/index.js",
+      "!src/index.js",
+      "!src/SetupTests.js",
+      "!src/serviceWorker.js",
+      "!src/Reducers/index.js",
+      "!src/assets/cleaners.js"
+    ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2"
   }
 }
